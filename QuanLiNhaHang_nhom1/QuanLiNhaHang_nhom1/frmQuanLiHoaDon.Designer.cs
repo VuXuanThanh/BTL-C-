@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLiNhaHang_nhom1
 {
-    partial class frmTimKiemHoaDon
+    partial class frmQuanLiHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -38,14 +38,12 @@ namespace QuanLiNhaHang_nhom1
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtMaKH = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +51,7 @@ namespace QuanLiNhaHang_nhom1
             // 
             this.dtpNgayXuat.CustomFormat = "yyyy-MM-d";
             this.dtpNgayXuat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayXuat.Location = new System.Drawing.Point(167, 71);
+            this.dtpNgayXuat.Location = new System.Drawing.Point(167, 96);
             this.dtpNgayXuat.Name = "dtpNgayXuat";
             this.dtpNgayXuat.Size = new System.Drawing.Size(589, 22);
             this.dtpNgayXuat.TabIndex = 21;
@@ -61,7 +59,7 @@ namespace QuanLiNhaHang_nhom1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 164);
+            this.label6.Location = new System.Drawing.Point(35, 189);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 17);
             this.label6.TabIndex = 18;
@@ -70,7 +68,7 @@ namespace QuanLiNhaHang_nhom1
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 119);
+            this.label4.Location = new System.Drawing.Point(35, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 17);
             this.label4.TabIndex = 8;
@@ -79,7 +77,7 @@ namespace QuanLiNhaHang_nhom1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 76);
+            this.label3.Location = new System.Drawing.Point(35, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 9;
@@ -88,7 +86,7 @@ namespace QuanLiNhaHang_nhom1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 33);
+            this.label2.Location = new System.Drawing.Point(35, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 17);
             this.label2.TabIndex = 10;
@@ -96,50 +94,33 @@ namespace QuanLiNhaHang_nhom1
             // 
             // btnQuayVe
             // 
-            this.btnQuayVe.Location = new System.Drawing.Point(640, 572);
+            this.btnQuayVe.Location = new System.Drawing.Point(422, 570);
             this.btnQuayVe.Name = "btnQuayVe";
             this.btnQuayVe.Size = new System.Drawing.Size(116, 40);
             this.btnQuayVe.TabIndex = 22;
             this.btnQuayVe.Text = "Quay về";
             this.btnQuayVe.UseVisualStyleBackColor = true;
-            this.btnQuayVe.Click += new System.EventHandler(this.btnQuayVe_Click);
             // 
             // txtMaHD
             // 
-            this.txtMaHD.Location = new System.Drawing.Point(167, 28);
+            this.txtMaHD.Location = new System.Drawing.Point(167, 53);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(589, 22);
             this.txtMaHD.TabIndex = 23;
             // 
             // txtMaNV
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(167, 116);
+            this.txtMaNV.Location = new System.Drawing.Point(167, 141);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(589, 22);
             this.txtMaNV.TabIndex = 23;
             // 
             // txtMaKH
             // 
-            this.txtMaKH.Location = new System.Drawing.Point(167, 161);
+            this.txtMaKH.Location = new System.Drawing.Point(167, 186);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(589, 22);
             this.txtMaKH.TabIndex = 23;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 211);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Tổng tiền";
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.Location = new System.Drawing.Point(167, 208);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(589, 22);
-            this.txtTongTien.TabIndex = 23;
             // 
             // dgvHoaDon
             // 
@@ -148,13 +129,12 @@ namespace QuanLiNhaHang_nhom1
             this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dgvHoaDon.Location = new System.Drawing.Point(25, 265);
+            this.Column4});
+            this.dgvHoaDon.Location = new System.Drawing.Point(25, 256);
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.RowHeadersWidth = 51;
             this.dgvHoaDon.RowTemplate.Height = 24;
-            this.dgvHoaDon.Size = new System.Drawing.Size(731, 286);
+            this.dgvHoaDon.Size = new System.Drawing.Size(731, 295);
             this.dgvHoaDon.TabIndex = 24;
             this.dgvHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellClick);
             // 
@@ -190,34 +170,35 @@ namespace QuanLiNhaHang_nhom1
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
-            // Column5
+            // btnXoa
             // 
-            this.Column5.DataPropertyName = "TongTien";
-            this.Column5.HeaderText = "Tổng tiền";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
+            this.btnXoa.Location = new System.Drawing.Point(280, 570);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(108, 40);
+            this.btnXoa.TabIndex = 25;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // frmTimKiemHoaDon
+            // frmQuanLiHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 636);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.dgvHoaDon);
-            this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.txtMaKH);
             this.Controls.Add(this.txtMaNV);
             this.Controls.Add(this.txtMaHD);
             this.Controls.Add(this.btnQuayVe);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpNgayXuat);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "frmTimKiemHoaDon";
-            this.Text = "Tìm kiếm hóa đơn";
-            this.Load += new System.EventHandler(this.frmTimKiemHoaDon_Load);
+            this.Name = "frmQuanLiHoaDon";
+            this.Text = "Quản lí hóa đơn";
+            this.Load += new System.EventHandler(this.frmQuanLiHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -235,13 +216,11 @@ namespace QuanLiNhaHang_nhom1
         private System.Windows.Forms.TextBox txtMaHD;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.TextBox txtMaKH;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.DataGridView dgvHoaDon;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button btnXoa;
     }
 }

@@ -116,11 +116,11 @@
     <Compile Include="frmOrderMonAn.Designer.cs">
       <DependentUpon>frmOrderMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTimKiemHoaDon.cs">
+    <Compile Include="frmQuanLiHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTimKiemHoaDon.Designer.cs">
-      <DependentUpon>frmTimKiemHoaDon.cs</DependentUpon>
+    <Compile Include="frmQuanLiHoaDon.Designer.cs">
+      <DependentUpon>frmQuanLiHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="frmKhachHang.cs">
       <SubType>Form</SubType>
@@ -196,8 +196,8 @@
     <EmbeddedResource Include="frmOrderMonAn.resx">
       <DependentUpon>frmOrderMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTimKiemHoaDon.resx">
-      <DependentUpon>frmTimKiemHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanLiHoaDon.resx">
+      <DependentUpon>frmQuanLiHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>

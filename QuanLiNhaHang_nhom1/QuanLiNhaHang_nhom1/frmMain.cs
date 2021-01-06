@@ -75,5 +75,11 @@ namespace QuanLiNhaHang_nhom1
             //frmBaoCaoThongKe frmBCTK = new frmBaoCaoThongKe();
             //frmBCTK.ShowDialog();
         }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLiHoaDon frmQLHD = new frmQuanLiHoaDon();
+            frmQLHD.ShowDialog();
+        }
     }
 }

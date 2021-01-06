@@ -230,6 +230,18 @@ namespace QuanLiNhaHang_nhom1
                 return true;
             else return false;
         }
+        public static DataTable showHoaDon()
+        {
+            string sql = "select * from HOADON";
+            DataTable table = new DataTable();
+            table = DAL.getTable(sql);
+            return table;
+        }
+        public static void deleteHoaDon(string maHD)
+        {
+            string sql = "delete from HOADON where MaHD='" + maHD + "'";
+            DAL.executeNonQuery(sql);
+        }
         public static void deleteChiTietHoaDon(string maHD)
         {
             string sql = "delete from CHITIETHOADON where MaHD='" + maHD + "'";
@@ -369,13 +381,13 @@ namespace QuanLiNhaHang_nhom1
         public static DataTable showDanhMuc()
         {
             DataTable table = new DataTable();
-            string sql = "select * from DANHMUC";
+            string sql = "select MaDanhMuc, TenDanhMuc from DANHMUC";
             table = DAL.getTable(sql);
             return table;
         }
-        public static void insertDanhMuc(string maDM, string tenDM)
+        public static void insertDanhMuc(string tenDM)
         {
-            string sql = "insert into DANHMUC values('" + maDM + "',N'" + tenDM + "')";
+            string sql = "insert into DANHMUC values(N'" + tenDM + "')";
             DAL.executeNonQuery(sql);
         }
         public static void deleteDanhMuc(string maDM)
@@ -435,8 +447,5 @@ namespace QuanLiNhaHang_nhom1
             string sql = "insert into CHITIETGOIMON values('" + IDGoiMon + "','" + maMon + "','" + soLuong + "','" + giamGia + "')";
             DAL.executeNonQuery(sql);
         }
-
-        
-      
     }
 }
