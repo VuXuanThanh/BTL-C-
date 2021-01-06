@@ -142,7 +142,6 @@ F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nho
 F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\QuanLiNhaHang_nhom1.csprojAssemblyReference.cache
 F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\QuanLiNhaHang_nhom1.csproj.ResolveComReference.cache
 F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\QuanLiNhaHang_nhom1.frmDanhMuc.resources
 F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\QuanLiNhaHang_nhom1.frmDMNhaCC.resources
@@ -164,3 +163,6 @@ F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nho
 F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\QuanLiNhaHang_nhom1.csproj.CopyComplete
 F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\QuanLiNhaHang_nhom1.exe
 F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\QuanLiNhaHang_nhom1.pdb
+F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\QuanLiNhaHang_nhom1.frmInHoaDonThanhToan.resources
+F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\RdlCompile.cache
+F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\RdlCompile.compiled

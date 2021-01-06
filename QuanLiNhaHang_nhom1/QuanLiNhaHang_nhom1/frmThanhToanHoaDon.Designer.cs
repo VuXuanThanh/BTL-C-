@@ -355,12 +355,14 @@ namespace QuanLiNhaHang_nhom1
             // 
             // txtTongTien
             // 
+            this.txtTongTien.BackColor = System.Drawing.Color.Bisque;
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.ForeColor = System.Drawing.Color.Maroon;
-            this.txtTongTien.Location = new System.Drawing.Point(921, 13);
+            this.txtTongTien.Location = new System.Drawing.Point(908, 19);
             this.txtTongTien.Multiline = true;
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(261, 34);
+            this.txtTongTien.Size = new System.Drawing.Size(261, 28);
             this.txtTongTien.TabIndex = 16;
             this.txtTongTien.TextChanged += new System.EventHandler(this.txtTongTien_TextChanged);
             // 

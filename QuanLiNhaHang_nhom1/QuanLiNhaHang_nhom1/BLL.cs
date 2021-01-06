@@ -365,13 +365,6 @@ namespace QuanLiNhaHang_nhom1
             table = DAL.getTable(sql);
             return table;
         }
-        public static string showTongTienTheoMaKH(string MaHD)
-        {
-            string str;
-            string sql = "select sum(ThanhTien) as TongTien from CHITIETHOADON inner join HOADON on HOADON.MaHD=CHITIETHOADON.MaHD where MaKH='" + MaHD + "'";
-            str = DAL.getValue(sql);
-            return str;
-        }
         // DANH MUC
         public static DataTable showDanhMuc()
         {
@@ -442,6 +435,8 @@ namespace QuanLiNhaHang_nhom1
             string sql = "insert into CHITIETGOIMON values('" + IDGoiMon + "','" + maMon + "','" + soLuong + "','" + giamGia + "')";
             DAL.executeNonQuery(sql);
         }
+
+        
       
     }
 }

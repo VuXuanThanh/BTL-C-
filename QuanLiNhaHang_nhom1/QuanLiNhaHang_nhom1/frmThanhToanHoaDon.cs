@@ -12,9 +12,6 @@ namespace QuanLiNhaHang_nhom1
 {
     public partial class frmThanhToanHoaDon : Form
     {
-        public static string maHD;
-        public static string maKH;
-        public static DateTime ngayXuat;
         public frmThanhToanHoaDon()
         {
             InitializeComponent();
@@ -381,6 +378,7 @@ namespace QuanLiNhaHang_nhom1
                 MessageBox.Show("Đã thêm thành công hóa đơn", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnInHoaDon.Enabled = true;
                 btnXuatFile.Enabled = true;
+                
 
             }
         }
@@ -393,23 +391,22 @@ namespace QuanLiNhaHang_nhom1
              }
         }
 
+        public static string maHD, tenKH, tenNV, diaChi, ngayXuat, tongTienBangChu, tongTienBangSo;
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
             if (txtMaHD.Text != "")
             {
                 maHD = txtMaHD.Text;
             }
-            if (cbxMaKH.Text != "")
-            {
-                maKH = cbxMaKH.Text;
-                ngayXuat = dtpNgayXuat.Value.Date;
-            }
-          /*  frmInHoaDonThanhToan frmIHD = new frmInHoaDonThanhToan();
-            frmIHD.maHD = maHD;
-            frmIHD.maKH = maKH;
-            frmIHD.ngayXuat = ngayXuat;
-            frmIHD.ShowDialog();*/
-            
+            tenKH = txtTenKH.Text;
+            diaChi = txtDiaChi.Text;
+            tenNV = txtTenNV.Text;
+            ngayXuat = dtpNgayXuat.Value.ToString();
+            tongTienBangSo = txtTongTien.Text;
+            tongTienBangChu = lblBangChu.Text;
+            frmInHoaDonThanhToan frmIHDTT = new frmInHoaDonThanhToan(maHD,tenKH,tenNV,ngayXuat,diaChi,tongTienBangSo, tongTienBangChu);
+           
+            frmIHDTT.ShowDialog();
         }
         private void frmHoaDon_FormClosing(object sender, FormClosingEventArgs e)
         {

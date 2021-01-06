@@ -98,6 +98,12 @@
     <Compile Include="frmGoiMonMain.Designer.cs">
       <DependentUpon>frmGoiMonMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInHoaDonThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInHoaDonThanhToan.Designer.cs">
+      <DependentUpon>frmInHoaDonThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThanhToanHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLiNhaHang_nhom1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhaHang_nhom1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frmDanhMuc.resx">
       <DependentUpon>frmDanhMuc.cs</DependentUpon>
@@ -175,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGoiMonMain.resx">
       <DependentUpon>frmGoiMonMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInHoaDonThanhToan.resx">
+      <DependentUpon>frmInHoaDonThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThanhToanHoaDon.resx">
       <DependentUpon>frmThanhToanHoaDon.cs</DependentUpon>
@@ -209,6 +223,7 @@
     <EmbeddedResource Include="frmTimKiemNV.resx">
       <DependentUpon>frmTimKiemNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InHoaDonThanhToan.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -228,6 +243,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanLiNhaHang_nhom1DataSet.xsc">
+      <DependentUpon>QuanLiNhaHang_nhom1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhaHang_nhom1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhaHang_nhom1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhaHang_nhom1DataSet.xss">
+      <DependentUpon>QuanLiNhaHang_nhom1DataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
