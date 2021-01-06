@@ -35,12 +35,14 @@ namespace QuanLiNhaHang_nhom1
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDSMonDaChon = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpThoiGian = new System.Windows.Forms.DateTimePicker();
             this.dgvDSMonAn = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbxMaDanhMuc = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaKH = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -60,8 +62,6 @@ namespace QuanLiNhaHang_nhom1
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dtpThoiGian = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSMonDaChon)).BeginInit();
@@ -143,6 +143,15 @@ namespace QuanLiNhaHang_nhom1
             this.panel2.Size = new System.Drawing.Size(487, 437);
             this.panel2.TabIndex = 1;
             // 
+            // dtpThoiGian
+            // 
+            this.dtpThoiGian.CustomFormat = "yyyy-MM-dd";
+            this.dtpThoiGian.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpThoiGian.Location = new System.Drawing.Point(131, 68);
+            this.dtpThoiGian.Name = "dtpThoiGian";
+            this.dtpThoiGian.Size = new System.Drawing.Size(281, 22);
+            this.dtpThoiGian.TabIndex = 5;
+            // 
             // dgvDSMonAn
             // 
             this.dgvDSMonAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -199,6 +208,15 @@ namespace QuanLiNhaHang_nhom1
             this.txtMaKH.ReadOnly = true;
             this.txtMaKH.Size = new System.Drawing.Size(281, 22);
             this.txtMaKH.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 73);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 17);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Thời gian: ";
             // 
             // label1
             // 
@@ -352,9 +370,9 @@ namespace QuanLiNhaHang_nhom1
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(323, 75);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.Size = new System.Drawing.Size(86, 17);
             this.label7.TabIndex = 17;
-            this.label7.Text = "Giảm giá";
+            this.label7.Text = "Giảm giá(%)";
             // 
             // txtMaMon
             // 
@@ -399,24 +417,6 @@ namespace QuanLiNhaHang_nhom1
             this.label4.Size = new System.Drawing.Size(64, 17);
             this.label4.TabIndex = 21;
             this.label4.Text = "Tên món";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 73);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 17);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Thời gian: ";
-            // 
-            // dtpThoiGian
-            // 
-            this.dtpThoiGian.CustomFormat = "yyyy-MM-dd";
-            this.dtpThoiGian.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpThoiGian.Location = new System.Drawing.Point(131, 68);
-            this.dtpThoiGian.Name = "dtpThoiGian";
-            this.dtpThoiGian.Size = new System.Drawing.Size(281, 22);
-            this.dtpThoiGian.TabIndex = 5;
             // 
             // frmOrderMonAn
             // 

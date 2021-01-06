@@ -209,9 +209,9 @@ namespace QuanLiNhaHang_nhom1
             return str;
         }
         // thêm hóa đơn
-        public static void insertHD(string MaHD, DateTime ngayXuat,string tinhTrang, string MaNV, string MaKH)
+        public static void insertHD(string MaHD, DateTime ngayXuat, string MaNV, string MaKH)
         {
-            string sql = "insert into HOADON values ('" + MaHD + "',N'" + ngayXuat + "',N'" + tinhTrang + "',N'" + MaNV + "','" + MaKH + "')";
+            string sql = "insert into HOADON values ('" + MaHD + "',N'" + ngayXuat + "',N'" + MaNV + "','" + MaKH + "')";
             DAL.executeNonQuery(sql);
         }
         // thêm chitiethoadon
@@ -359,7 +359,7 @@ namespace QuanLiNhaHang_nhom1
         public static DataTable showChiTietHoaDon(string maKH, DateTime ngayXuat)
         {
             DataTable table = new DataTable();
-            string sql = "select CHITIETGOIMON.MaMon, TenMon,sum(SoLuong) as SoLuong,MONAN.DonGia,sum(CHITIETGOIMON.GiamGia) as TongGiamGia,sum(SoLuong*MONAN.DonGia-SoLuong*MONAN.DonGia*GiamGia/100) as ThanhTien  " +
+            string sql = "select CHITIETGOIMON.MaMon, TenMon,sum(SoLuong) as SoLuong,MONAN.DonGia,sum((SoLuong*MONAN.DonGia*GiamGia/100)) as GiamGia,sum(SoLuong*MONAN.DonGia-SoLuong*MONAN.DonGia*GiamGia/100) as ThanhTien  " +
                 "from CHITIETGOIMON inner join MONAN on CHITIETGOIMON.MaMon=MONAN.MaMon " +
                 "inner join GOIMON on GOIMON.IDGoiMon = CHITIETGOIMON.IDGoiMon where MaKH='"+maKH+"' and ThoiGian ='"+ngayXuat+"' group by CHITIETGOIMON.MaMon, TenMon,MONAN.DonGia";
             table = DAL.getTable(sql);

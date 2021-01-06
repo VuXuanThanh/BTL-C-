@@ -53,12 +53,6 @@ namespace QuanLiNhaHang_nhom1
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dgvMonAnTheoHD = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Đơ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblBangChu = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -69,6 +63,12 @@ namespace QuanLiNhaHang_nhom1
             this.btnInHoaDon = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnTao = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Đơ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -311,7 +311,7 @@ namespace QuanLiNhaHang_nhom1
             this.Column2,
             this.Column4,
             this.Đơ,
-            this.Column5,
+            this.Column3,
             this.Column6});
             this.dgvMonAnTheoHD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMonAnTheoHD.Location = new System.Drawing.Point(0, 0);
@@ -320,54 +320,6 @@ namespace QuanLiNhaHang_nhom1
             this.dgvMonAnTheoHD.RowTemplate.Height = 24;
             this.dgvMonAnTheoHD.Size = new System.Drawing.Size(1217, 376);
             this.dgvMonAnTheoHD.TabIndex = 1;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaMon";
-            this.Column1.HeaderText = "Mã món";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "TenMon";
-            this.Column2.HeaderText = "Tên món";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 170;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "SoLuong";
-            this.Column4.HeaderText = "Số lượng";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 160;
-            // 
-            // Đơ
-            // 
-            this.Đơ.DataPropertyName = "DonGia";
-            this.Đơ.HeaderText = "Đơn giá";
-            this.Đơ.MinimumWidth = 6;
-            this.Đơ.Name = "Đơ";
-            this.Đơ.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "TongGiamGia";
-            this.Column5.HeaderText = "Tổng giảm giá(%)";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 140;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "ThanhTien";
-            this.Column6.HeaderText = "Thành tiền";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 180;
             // 
             // panel3
             // 
@@ -475,7 +427,55 @@ namespace QuanLiNhaHang_nhom1
             this.btnTao.UseVisualStyleBackColor = true;
             this.btnTao.Click += new System.EventHandler(this.btnTao_Click);
             // 
-            // frmHoaDon
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaMon";
+            this.Column1.HeaderText = "Mã món";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenMon";
+            this.Column2.HeaderText = "Tên món";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 170;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "SoLuong";
+            this.Column4.HeaderText = "Số lượng";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 160;
+            // 
+            // Đơ
+            // 
+            this.Đơ.DataPropertyName = "DonGia";
+            this.Đơ.HeaderText = "Đơn giá";
+            this.Đơ.MinimumWidth = 6;
+            this.Đơ.Name = "Đơ";
+            this.Đơ.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "GiamGia";
+            this.Column3.HeaderText = "Giảm giá(đồng)";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 140;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "ThanhTien";
+            this.Column6.HeaderText = "Thành tiền";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 200;
+            // 
+            // frmThanhToanHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -483,7 +483,7 @@ namespace QuanLiNhaHang_nhom1
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmHoaDon";
+            this.Name = "frmThanhToanHoaDon";
             this.Text = "Thanh toán";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHoaDon_FormClosing);
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
@@ -537,12 +537,12 @@ namespace QuanLiNhaHang_nhom1
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView dgvMonAnTheoHD;
+        private System.Windows.Forms.Button btnXuatFile;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Đơ;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Button btnXuatFile;
     }
 }

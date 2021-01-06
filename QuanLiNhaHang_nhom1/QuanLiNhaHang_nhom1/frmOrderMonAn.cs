@@ -68,7 +68,7 @@ namespace QuanLiNhaHang_nhom1
                 txtTenMon.Text = BLL.showTenTheoMaMon(txtMaMon.Text);
                 txtDonGia.Text = BLL.showDonGiaTheoMaMon(txtMaMon.Text);
                 string anhMonAn = BLL.showAnhTheoMaMon(txtMaMon.Text);
-                Image image = Image.FromFile(@"F:\BTL lập trình windows nhóm 1\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\Images\Dishes\"+anhMonAn);
+                Image image = Image.FromFile(@"F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\Images\Dishes\" + anhMonAn);
                 picAnhMonAn.Image = image;
                 picAnhMonAn.Width = image.Width;
                 picAnhMonAn.Height = image.Height; 
@@ -78,6 +78,10 @@ namespace QuanLiNhaHang_nhom1
 
         private void txtDonGia_TextChanged(object sender, EventArgs e)
         {
+            if (txtMaMon.Text == "")
+            {
+                return;
+            }
             double tt, sl, dg, gg;
             if (txtDonGia.Text == "")
                 dg = 0;
@@ -118,12 +122,11 @@ namespace QuanLiNhaHang_nhom1
         }
         private void numSoLuong_ValueChanged(object sender, EventArgs e)
         {
-            if (txtMaMon.Text == "")
+            double tt, sl, dg, gg;
+            if (txtDonGia.Text == "")
             {
-                MessageBox.Show("vui lòng chọn món trước!!!!");
                 return;
             }
-            double tt, sl, dg, gg;
             dg = double.Parse(txtDonGia.Text);
             sl = double.Parse(numSoLuong.Value.ToString());
             if (cbxGiamGia.Text == "")
@@ -135,25 +138,27 @@ namespace QuanLiNhaHang_nhom1
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            float gg;
-            if (txtMaMon.Text == "")
+            try
             {
-                MessageBox.Show("vui lòng chọn món trước!!!!");
-                return;
+                float gg;
+                if (cbxGiamGia.Text == "")
+                    gg = 0;
+                else
+                    gg = float.Parse(cbxGiamGia.Text);
+                if (checkDuplicateKey(txtMaMon.Text))
+                {
+                    table.Rows.Add(txtMaMon.Text, txtTenMon.Text, int.Parse(numSoLuong.Value.ToString()), float.Parse(txtDonGia.Text), gg, float.Parse(txtThanhTien.Text));
+                }
+                else
+                {
+                    MessageBox.Show("Món ăn này đã được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                resetValue();
             }
-            if (cbxGiamGia.Text == "")
-                gg = 0;
-            else
-                gg = float.Parse(cbxGiamGia.Text);
-            if (checkDuplicateKey(txtMaMon.Text))
+            catch(Exception ex)
             {
-                table.Rows.Add(txtMaMon.Text, txtTenMon.Text, int.Parse(numSoLuong.Value.ToString()), float.Parse(txtDonGia.Text), gg, float.Parse(txtThanhTien.Text));
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                MessageBox.Show("Món ăn này đã được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            resetValue();
         }
         private void deleteRow(string ma)
         {
@@ -185,7 +190,7 @@ namespace QuanLiNhaHang_nhom1
        
         private void btnHoanTat_Click(object sender, EventArgs e)
         {
-            if (table.Rows.Count>0)
+            if (dgvDSMonDaChon.Rows.Count>0)
             {
                 BLL.insertGoiMon(txtMaKH.Text,false,DateTime.Parse(dtpThoiGian.Text));
                 foreach (DataRow row in table.Rows)
@@ -196,6 +201,7 @@ namespace QuanLiNhaHang_nhom1
                     BLL.insertChiTietGoiMon(IDGoiMon, row["Mã món"].ToString(), int.Parse(row["Số lượng"].ToString()), float.Parse(row["Giảm giá"].ToString()));
                 }
                 MessageBox.Show("Đã order thành công món ăn");
+                dgvDSMonDaChon.DataSource = null;
             }
             else
             {
@@ -243,5 +249,7 @@ namespace QuanLiNhaHang_nhom1
                 this.Close();
             }
         }
+
+      
     }
 }

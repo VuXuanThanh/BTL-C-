@@ -366,8 +366,7 @@ namespace QuanLiNhaHang_nhom1
                     return;
                 }
                 // thêm mới vào bảng hóa đơn
-                string tinhTrang = "Chưa thanh toán";
-                BLL.insertHD(txtMaHD.Text, dtpNgayXuat.Value.Date,cbxMaNV.Text, cbxMaKH.Text,tinhTrang);
+                BLL.insertHD(txtMaHD.Text, dtpNgayXuat.Value.Date,cbxMaNV.Text, cbxMaKH.Text);
                 // thêm mới bảng chi tiết hóa đơn
                 if (dgvMonAnTheoHD.Rows.Count == 0)
                 {
@@ -530,11 +529,11 @@ namespace QuanLiNhaHang_nhom1
             exRange.Range["C11:C11"].ColumnWidth = 27;
             exRange.Range["D11:D11"].Value = "Số lượng";
             exRange.Range["E11:E11"].Value = "Đơn giá";
-            exRange.Range["F11:F11"].Value = "Tổng các lần giảm giá";
+            exRange.Range["F11:F11"].Value = "Tiền giảm giá";
             exRange.Range["F11:F11"].ColumnWidth = 25;
             exRange.Range["G11:G11"].Value = "Thành tiền";
             exRange.Range["G11:G11"].ColumnWidth = 25;
-            tblMonAn = BLL.showMonAnDeXuatRaFileExel(cbxMaKH.Text,DateTime.Parse(dtpNgayXuat.Text));
+            tblMonAn = BLL.showChiTietHoaDon(cbxMaKH.Text,DateTime.Parse(dtpNgayXuat.Text));
             for (hang = 0; hang < tblMonAn.Rows.Count; hang++)
             {
                 //Điền số thứ tự vào cột 1 từ dòng 12
@@ -543,7 +542,7 @@ namespace QuanLiNhaHang_nhom1
                 //Điền thông tin hàng từ cột thứ 2, dòng 12
                 {
                     exSheet.Cells[cot + 2][hang + 12] = tblMonAn.Rows[hang][cot].ToString();
-                    if (cot == 4) exSheet.Cells[cot + 2][hang + 12] = tblMonAn.Rows[hang][cot].ToString() + "%";
+                    if (cot == 4) exSheet.Cells[cot + 2][hang + 12] = tblMonAn.Rows[hang][cot].ToString();
                 }
             }
             DialogResult result = MessageBox.Show("Bạn muốn xuất hóa đơn ra exel ko?", "Thông báo?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
