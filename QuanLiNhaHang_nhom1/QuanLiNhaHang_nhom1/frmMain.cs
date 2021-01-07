@@ -81,5 +81,17 @@ namespace QuanLiNhaHang_nhom1
             frmQuanLiHoaDon frmQLHD = new frmQuanLiHoaDon();
             frmQLHD.ShowDialog();
         }
+
+        private void ThongKeHoaDonmnu_Click(object sender, EventArgs e)
+        {
+            frmThongKeHoaDon frmTKHD = new frmThongKeHoaDon();
+            frmTKHD.ShowDialog();
+        }
+
+        private void mnuTimKiem_Click(object sender, EventArgs e)
+        {
+            TimKiem TK = new TimKiem();
+            TK.ShowDialog();
+        }
     }
 }

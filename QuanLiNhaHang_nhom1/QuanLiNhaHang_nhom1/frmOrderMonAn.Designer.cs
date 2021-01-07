@@ -140,7 +140,7 @@ namespace QuanLiNhaHang_nhom1
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(487, 437);
+            this.panel2.Size = new System.Drawing.Size(439, 437);
             this.panel2.TabIndex = 1;
             // 
             // dtpThoiGian
@@ -163,7 +163,7 @@ namespace QuanLiNhaHang_nhom1
             this.dgvDSMonAn.Name = "dgvDSMonAn";
             this.dgvDSMonAn.RowHeadersWidth = 51;
             this.dgvDSMonAn.RowTemplate.Height = 24;
-            this.dgvDSMonAn.Size = new System.Drawing.Size(487, 274);
+            this.dgvDSMonAn.Size = new System.Drawing.Size(439, 274);
             this.dgvDSMonAn.TabIndex = 4;
             this.dgvDSMonAn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSMonAn_CellClick);
             // 
@@ -231,9 +231,9 @@ namespace QuanLiNhaHang_nhom1
             // 
             this.panel3.Controls.Add(this.groupBox3);
             this.panel3.Controls.Add(this.groupBox2);
-            this.panel3.Location = new System.Drawing.Point(486, 0);
+            this.panel3.Location = new System.Drawing.Point(445, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(847, 437);
+            this.panel3.Size = new System.Drawing.Size(888, 437);
             this.panel3.TabIndex = 2;
             // 
             // groupBox3
@@ -242,7 +242,7 @@ namespace QuanLiNhaHang_nhom1
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(847, 273);
+            this.groupBox3.Size = new System.Drawing.Size(888, 314);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ảnh món ăn";
@@ -252,7 +252,7 @@ namespace QuanLiNhaHang_nhom1
             this.picAnhMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picAnhMonAn.Location = new System.Drawing.Point(3, 18);
             this.picAnhMonAn.Name = "picAnhMonAn";
-            this.picAnhMonAn.Size = new System.Drawing.Size(841, 252);
+            this.picAnhMonAn.Size = new System.Drawing.Size(882, 293);
             this.picAnhMonAn.TabIndex = 0;
             this.picAnhMonAn.TabStop = false;
             // 
@@ -273,16 +273,16 @@ namespace QuanLiNhaHang_nhom1
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 273);
+            this.groupBox2.Location = new System.Drawing.Point(0, 314);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(847, 164);
+            this.groupBox2.Size = new System.Drawing.Size(888, 123);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin món";
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(696, 88);
+            this.btnXoa.Location = new System.Drawing.Point(696, 72);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(114, 43);
             this.btnXoa.TabIndex = 30;
@@ -302,7 +302,7 @@ namespace QuanLiNhaHang_nhom1
             // 
             // txtThanhTien
             // 
-            this.txtThanhTien.Location = new System.Drawing.Point(413, 112);
+            this.txtThanhTien.Location = new System.Drawing.Point(413, 90);
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.Size = new System.Drawing.Size(185, 22);
             this.txtThanhTien.TabIndex = 23;
@@ -310,7 +310,7 @@ namespace QuanLiNhaHang_nhom1
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(323, 115);
+            this.label8.Location = new System.Drawing.Point(323, 93);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 17);
             this.label8.TabIndex = 18;
@@ -318,14 +318,14 @@ namespace QuanLiNhaHang_nhom1
             // 
             // numSoLuong
             // 
-            this.numSoLuong.Location = new System.Drawing.Point(118, 112);
+            this.numSoLuong.Location = new System.Drawing.Point(118, 91);
             this.numSoLuong.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numSoLuong.Name = "numSoLuong";
-            this.numSoLuong.Size = new System.Drawing.Size(57, 22);
+            this.numSoLuong.Size = new System.Drawing.Size(54, 22);
             this.numSoLuong.TabIndex = 27;
             this.numSoLuong.Value = new decimal(new int[] {
             1,
@@ -343,7 +343,7 @@ namespace QuanLiNhaHang_nhom1
             "20",
             "50",
             "75"});
-            this.cbxGiamGia.Location = new System.Drawing.Point(413, 68);
+            this.cbxGiamGia.Location = new System.Drawing.Point(413, 54);
             this.cbxGiamGia.Name = "cbxGiamGia";
             this.cbxGiamGia.Size = new System.Drawing.Size(185, 24);
             this.cbxGiamGia.TabIndex = 28;
@@ -352,7 +352,7 @@ namespace QuanLiNhaHang_nhom1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 118);
+            this.label6.Location = new System.Drawing.Point(28, 93);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 19;
@@ -362,13 +362,13 @@ namespace QuanLiNhaHang_nhom1
             // 
             this.txtTenMon.Location = new System.Drawing.Point(413, 23);
             this.txtTenMon.Name = "txtTenMon";
-            this.txtTenMon.Size = new System.Drawing.Size(180, 22);
+            this.txtTenMon.Size = new System.Drawing.Size(185, 22);
             this.txtTenMon.TabIndex = 25;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(323, 75);
+            this.label7.Location = new System.Drawing.Point(323, 61);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 17);
             this.label7.TabIndex = 17;
@@ -385,16 +385,16 @@ namespace QuanLiNhaHang_nhom1
             // 
             // txtDonGia
             // 
-            this.txtDonGia.Location = new System.Drawing.Point(117, 72);
+            this.txtDonGia.Location = new System.Drawing.Point(118, 58);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(163, 22);
+            this.txtDonGia.Size = new System.Drawing.Size(162, 22);
             this.txtDonGia.TabIndex = 24;
             this.txtDonGia.TextChanged += new System.EventHandler(this.txtDonGia_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 75);
+            this.label5.Location = new System.Drawing.Point(27, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 17);
             this.label5.TabIndex = 20;

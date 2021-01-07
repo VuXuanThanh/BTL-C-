@@ -45,7 +45,10 @@ namespace QuanLiNhaHang_nhom1
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Xác nhận thoát tác vụ này?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void cbxMaKH_SelectedIndexChanged(object sender, EventArgs e)

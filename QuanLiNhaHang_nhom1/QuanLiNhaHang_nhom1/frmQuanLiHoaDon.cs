@@ -58,5 +58,10 @@ namespace QuanLiNhaHang_nhom1
             }
           
         }
+
+        private void btnQuayVe_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

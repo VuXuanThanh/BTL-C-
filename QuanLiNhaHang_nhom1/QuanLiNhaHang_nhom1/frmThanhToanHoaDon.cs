@@ -374,10 +374,12 @@ namespace QuanLiNhaHang_nhom1
                     // currQty += row.Cells["qty"].Value;
                     BLL.insertChiTietHD(txtMaHD.Text, row.Cells[0].Value.ToString(), int.Parse(row.Cells[2].Value.ToString()), float.Parse(row.Cells[3].Value.ToString()), float.Parse(row.Cells[4].Value.ToString()), float.Parse(row.Cells[5].Value.ToString()));
                 }
+                BLL.updateGoiMon(cbxMaKH.Text);
                 txtTongTien.Text = BLL.showTongTienTheoMaHD(txtMaHD.Text);
                 MessageBox.Show("Đã thêm thành công hóa đơn", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnInHoaDon.Enabled = true;
                 btnXuatFile.Enabled = true;
+               
                 
 
             }
@@ -412,7 +414,10 @@ namespace QuanLiNhaHang_nhom1
         {
             resetValue();
         }
-       public static DataTable table = new DataTable();
+
+        
+
+        public static DataTable table = new DataTable();
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             //if (cbxChuoiTim.Text == "")
@@ -530,7 +535,7 @@ namespace QuanLiNhaHang_nhom1
             exRange.Range["F11:F11"].ColumnWidth = 25;
             exRange.Range["G11:G11"].Value = "Thành tiền";
             exRange.Range["G11:G11"].ColumnWidth = 25;
-            tblMonAn = BLL.showChiTietHoaDon(cbxMaKH.Text,DateTime.Parse(dtpNgayXuat.Text));
+            tblMonAn = BLL.showMonAnDeXuatRaFileExel(txtMaHD.Text);
             for (hang = 0; hang < tblMonAn.Rows.Count; hang++)
             {
                 //Điền số thứ tự vào cột 1 từ dòng 12

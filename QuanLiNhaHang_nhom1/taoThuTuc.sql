@@ -8,3 +8,17 @@ begin
 end
 
 exec sp_getInforOfFood '162021_203526'
+
+
+go
+
+create proc sp_ThongKeHoaDonTheoNgay @ngaybatdau datetime, @ngayketthuc datetime
+as
+begin
+	select HOADON.MaHD, NgayXuat, MaNV, MaKH, sum(ThanhTien) as TongTien
+	from CHITIETHOADON inner join HOADON on HOADON.MaHD = CHITIETHOADON.MaHD
+	group by HOADON.MaHD, NgayXuat, MaNV, MaKH
+	having NgayXuat>=@ngaybatdau and NgayXuat<=@ngayketthuc
+end
+
+exec sp_ThongKeHoaDonTheoNgay '2021-01-07', '2021-01-08'

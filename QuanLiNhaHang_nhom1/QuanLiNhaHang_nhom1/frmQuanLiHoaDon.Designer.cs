@@ -100,6 +100,7 @@ namespace QuanLiNhaHang_nhom1
             this.btnQuayVe.TabIndex = 22;
             this.btnQuayVe.Text = "Quay về";
             this.btnQuayVe.UseVisualStyleBackColor = true;
+            this.btnQuayVe.Click += new System.EventHandler(this.btnQuayVe_Click);
             // 
             // txtMaHD
             // 

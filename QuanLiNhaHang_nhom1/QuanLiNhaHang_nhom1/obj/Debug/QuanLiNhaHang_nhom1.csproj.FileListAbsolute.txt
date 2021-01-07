@@ -166,3 +166,5 @@ F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nho
 F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\RdlCompile.cache
 F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\RdlCompile.compiled
 F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\QuanLiNhaHang_nhom1.frmQuanLiHoaDon.resources
+F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\QuanLiNhaHang_nhom1.frmThongKeHoaDon.resources
+F:\BTL lập trình windows nhóm 1\BTL-C-\QuanLiNhaHang_nhom1\QuanLiNhaHang_nhom1\obj\Debug\QuanLiNhaHang_nhom1.TimKiem.resources

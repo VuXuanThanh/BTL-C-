@@ -258,13 +258,12 @@ namespace QuanLiNhaHang_nhom1
             return table;
         }
         // lấy thông tin món ăn để xuất ra file exel
-        public static DataTable showMonAnDeXuatRaFileExel(string ma, DateTime ngayXuat)
+        public static DataTable showMonAnDeXuatRaFileExel(string ma)
         {
             DataTable table = new DataTable();
-            //  string sql = "select TenMon, SoLuong, [MONAN].DonGia, GiamGia, (SoLuong*[MONAN].DonGia-SoLuong*[MONAN].DonGia*GiamGia/100) as ThanhTien from CHITIETHOADON inner join MONAN on CHITIETHOADON.MaMon = MONAN.MaMon where CHITIETHOADON.MaHD='" + ma + "'";
-            string sql = "select CHITIETGOIMON.MaMon, TenMon,sum(SoLuong) as SoLuong,MONAN.DonGia,sum(CHITIETGOIMON.GiamGia) as TongGiamGia,sum(SoLuong*MONAN.DonGia-SoLuong*MONAN.DonGia*GiamGia/100) as ThanhTien  " +
-               "from CHITIETGOIMON inner join MONAN on CHITIETGOIMON.MaMon=MONAN.MaMon " +
-               "inner join GOIMON on GOIMON.IDGoiMon = CHITIETGOIMON.IDGoiMon where MaKH='" + ma + "' and ThoiGian='"+ngayXuat+"' group by CHITIETGOIMON.MaMon, TenMon,MONAN.DonGia";
+            string sql = "select CHITIETHOADON.MaMon, TenMon, SoLuong, CHITIETHOADON.DonGia, GiamGia, ThanhTien  " +
+               "from CHITIETHOADON inner join MONAN on CHITIETHOADON.MaMon = MONAN.MaMon where MaHD='"+ma+"'";
+              
             table = DAL.getTable(sql);
             return table;
         }
@@ -373,9 +372,14 @@ namespace QuanLiNhaHang_nhom1
             DataTable table = new DataTable();
             string sql = "select CHITIETGOIMON.MaMon, TenMon,sum(SoLuong) as SoLuong,MONAN.DonGia,sum((SoLuong*MONAN.DonGia*GiamGia/100)) as GiamGia,sum(SoLuong*MONAN.DonGia-SoLuong*MONAN.DonGia*GiamGia/100) as ThanhTien  " +
                 "from CHITIETGOIMON inner join MONAN on CHITIETGOIMON.MaMon=MONAN.MaMon " +
-                "inner join GOIMON on GOIMON.IDGoiMon = CHITIETGOIMON.IDGoiMon where MaKH='"+maKH+"' and ThoiGian ='"+ngayXuat+"' group by CHITIETGOIMON.MaMon, TenMon,MONAN.DonGia";
+                "inner join GOIMON on GOIMON.IDGoiMon = CHITIETGOIMON.IDGoiMon where MaKH='"+maKH+"' and ThoiGian ='"+ngayXuat+"' and TrangThai = 0 group by CHITIETGOIMON.MaMon, TenMon,MONAN.DonGia";
             table = DAL.getTable(sql);
             return table;
+        }
+        public static void updateGoiMon(string maKH)
+        {
+            string sql = "update GOIMON set TrangThai = 1 where MaKH='" + maKH + "'";
+            DAL.executeNonQuery(sql);
         }
         // DANH MUC
         public static DataTable showDanhMuc()

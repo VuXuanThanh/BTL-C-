@@ -69,7 +69,7 @@ namespace QuanLiNhaHang_nhom1
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 450);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1036, 68);
+            this.panel1.Size = new System.Drawing.Size(1008, 68);
             this.panel1.TabIndex = 1;
             // 
             // btnTim
@@ -156,7 +156,7 @@ namespace QuanLiNhaHang_nhom1
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1036, 168);
+            this.panel2.Size = new System.Drawing.Size(1008, 168);
             this.panel2.TabIndex = 0;
             // 
             // txtDienThoai
@@ -247,7 +247,7 @@ namespace QuanLiNhaHang_nhom1
             this.dgvNhaCC.Name = "dgvNhaCC";
             this.dgvNhaCC.RowHeadersWidth = 51;
             this.dgvNhaCC.RowTemplate.Height = 24;
-            this.dgvNhaCC.Size = new System.Drawing.Size(1036, 282);
+            this.dgvNhaCC.Size = new System.Drawing.Size(1008, 282);
             this.dgvNhaCC.TabIndex = 0;
             this.dgvNhaCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhaCC_CellClick);
             // 
@@ -287,7 +287,7 @@ namespace QuanLiNhaHang_nhom1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 518);
+            this.ClientSize = new System.Drawing.Size(1008, 518);
             this.Controls.Add(this.dgvNhaCC);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
